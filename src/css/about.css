@@ -1,0 +1,192 @@
+.about {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	position: relative;
+	margin-top: 1rem;
+	padding-top: 1rem;
+	flex-direction: column;
+	align-items: center; /* Tambahkan ini */
+}
+
+.about::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 90%;
+	height: 1.5px;
+	background: #6d5fab;
+}
+
+.about .about-us {
+	width: 75%;
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	margin-bottom: 5rem;
+}
+
+.about .third-party {
+	width: 85%;
+	text-align: start;
+	display: flex;
+	align-items: center;
+	margin-bottom: 2rem;
+}
+
+.about .third-party img {
+	width: 345px;
+	height: 215px;
+	border-radius: 25px;
+	margin-right: 1.5rem;
+	object-fit: cover;
+}
+
+.about .third-party:nth-of-type(3) {
+	flex-direction: row-reverse;
+	text-align: end;
+}
+
+.about .third-party:nth-of-type(3) img {
+	margin-right: 0;
+	margin-left: 1.5rem;
+}
+
+.about .privacy {
+	text-align: start;
+	display: flex;
+	flex-direction: row;
+	width: 85%;
+	align-items: center;
+	position: relative;
+	margin: 4rem 0;
+	gap: 5rem;
+}
+
+.about .privacy .detail-privacy h3 {
+	font-size: 2rem;
+	font-weight: 800;
+}
+
+.about .privacy .detail-privacy p {
+	color: #dfd3d3;
+}
+
+.about .privacy .detail-privacy {
+	position: relative;
+}
+
+.about .privacy .detail-privacy::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: -1rem;
+	height: 100%;
+	width: 0.2rem;
+	background-color: #6d5fab;
+}
+
+/* Tambahkan di CSS global atau file khusus */
+.get-started-btn {
+	position: relative;
+	display: inline-block;
+	padding: 14px 42px;
+	background: linear-gradient(90deg, #6d5fab, #b341ff);
+	color: white;
+	font-weight: bold;
+	font-size: 1.1rem;
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	border-radius: 15px;
+	overflow: hidden;
+	transition: all 0.5s ease;
+	box-shadow: 0 5px 15px rgba(109, 95, 171, 0.4);
+	border: none;
+	cursor: pointer;
+	margin-bottom: 3rem;
+}
+
+.get-started-btn:hover {
+	transform: translateY(-3px);
+	box-shadow: 0 8px 25px rgba(179, 65, 255, 0.6);
+}
+
+.get-started-btn:active {
+	transform: translateY(1px);
+}
+
+/* Efek animasi ripple */
+.get-started-btn::after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 0;
+	height: 0;
+	background: rgba(255, 255, 255, 0.2);
+	border-radius: 50%;
+	transform: translate(-50%, -50%);
+	transition: width 0.5s, height 0.5s;
+}
+
+.get-started-btn:hover::after {
+	width: 300px;
+	height: 300px;
+}
+
+/* Efek border animasi */
+.get-started-btn::before {
+	content: "";
+	position: absolute;
+	top: -2px;
+	left: -2px;
+	right: -2px;
+	bottom: -2px;
+	background: linear-gradient(45deg, #6d5fab, #b341ff, #6d5fab, #b341ff);
+	background-size: 400%;
+	border-radius: 50px;
+	z-index: -1;
+	opacity: 0;
+	transition: opacity 0.5s, filter 0.5s;
+	filter: blur(5px);
+}
+
+.get-started-btn:hover::before {
+	opacity: 1;
+	animation: glow 8s linear infinite;
+}
+
+@keyframes glow {
+	0% {
+		background-position: 0 0;
+	}
+	100% {
+		background-position: 400% 0;
+	}
+}
+
+@media (max-width: 840px) {
+	.about .third-party {
+		flex-direction: column !important;
+		text-align: center !important;
+	}
+
+	.about .third-party img {
+		margin-bottom: 2rem;
+	}
+
+	.about .privacy {
+		flex-direction: column;
+	}
+}
+
+@media (max-width: 480px) {
+	.about .third-party img {
+		width: 245px;
+		height: 120px;
+		margin: 0 0 2rem !important;
+	}
+}

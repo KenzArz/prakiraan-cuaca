@@ -1,0 +1,11 @@
+.title {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 3rem 1rem 0;
+}
+
+.title h4 {
+	font-weight: normal;
+	color: #dfd3d3;
+}

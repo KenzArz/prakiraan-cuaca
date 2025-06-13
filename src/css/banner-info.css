@@ -1,0 +1,307 @@
+.banner {
+	display: flex;
+	justify-content: center;
+	margin: 1rem 4rem;
+	margin-bottom: 1rem;
+}
+
+.banner > img {
+	position: absolute;
+	width: 100%;
+	max-width: 1007px;
+	height: auto;
+	max-height: 313px;
+	filter: opacity(0.4) blur(1px);
+	border-radius: 20px;
+	object-fit: cover;
+	z-index: -1;
+}
+
+.banner .ws {
+	display: none;
+}
+
+.banner .wl {
+	display: flex;
+}
+
+.banner .banner-content {
+	width: 90%;
+	max-width: 1007px;
+	min-height: 313px;
+	height: auto;
+	justify-content: center;
+	align-items: center;
+}
+
+.banner .banner-content .time-location {
+	margin-right: 2rem;
+}
+
+.banner .banner-content .time-location h4 {
+	font-style: normal;
+	font-weight: 500;
+	font-size: 1.25rem;
+	line-height: 1.875rem;
+	color: #dfd3d3;
+	margin: 0.4rem 0;
+}
+
+.banner .banner-content .time-location h1 {
+	font-style: normal;
+	font-weight: 700;
+	font-size: 3rem;
+	color: #ffffff;
+	margin: 0;
+}
+
+.banner .banner-content .banner-info {
+	width: 538px;
+	height: 179px;
+	justify-content: center;
+	display: flex;
+	background: rgba(217, 217, 217, 0.35);
+	backdrop-filter: blur(5px);
+	border-radius: 20px;
+	margin-right: 2rem;
+}
+
+.banner .banner-content .banner-info .informations {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	width: fit-content;
+	margin: 0.49rem 2.6rem;
+}
+
+.banner .banner-content .banner-info .informations:nth-child(1) {
+	margin: 0.5rem 1.5rem;
+}
+
+.banner .banner-content .banner-info .informations .informations-data {
+	display: inherit;
+	flex-direction: column;
+	align-items: center;
+}
+
+.banner
+	.banner-content
+	.banner-info
+	.informations
+	.informations-data
+	h4:nth-of-type(1) {
+	color: #dfd3d3;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 20px;
+}
+
+.banner .banner-content .banner-info .informations .informations-data h4 {
+	font-weight: 400;
+	font-size: 1rem;
+}
+
+.banner .banner-content .banner-info .informations .informations-data img {
+	margin-top: 0.2rem;
+	margin-bottom: 0.1rem;
+}
+
+.banner .banner-content .cuaca img {
+	width: 97px;
+	height: 129px;
+	margin-bottom: 0.4rem;
+}
+
+.banner .banner-content .cuaca h4 {
+	margin: 0;
+	font-style: normal;
+	font-weight: 500;
+	font-size: clamp(1rem, 1.5vw + 0.5rem, 1.5rem);
+	line-height: clamp(1.5rem, 2vw + 1rem, 2rem);
+	color: #dfd3d3;
+}
+
+@media (max-width: 1080px) {
+	.banner > img {
+		width: 90%;
+		max-width: 780px;
+		max-height: 250px;
+	}
+
+	.banner .banner-content {
+		width: 90%;
+		max-width: 780px;
+		min-height: 250px;
+	}
+
+	.banner .banner-content .time-location h4 {
+		font-size: 1.1rem;
+	}
+
+	.banner .banner-content .time-location h1 {
+		font-size: 2.5rem;
+	}
+
+	.banner .banner-content .banner-info {
+		min-width: 420px;
+		max-width: 420px;
+		height: 140px;
+	}
+
+	.banner .banner-content .banner-info .informations {
+		margin: 0.5rem 2rem;
+	}
+
+	.banner .banner-content .banner-info .informations:nth-child(1) {
+		margin: 0.5rem 1rem;
+	}
+
+	.banner .banner-content .banner-info .informations .informations-data h4 {
+		font-size: 0.8rem !important;
+	}
+
+	.banner .banner-content .banner-info .informations .informations-data img {
+		height: 24px;
+		margin: 0;
+	}
+
+	.banner .banner-content .cuaca img {
+		width: 75px;
+		height: 98px;
+	}
+}
+
+@media (max-width: 840px) {
+	.banner {
+		margin: 1rem 2rem;
+	}
+	.banner > img {
+		width: 100%;
+		max-width: 100%;
+		border-radius: 0;
+		max-height: 250px;
+	}
+
+	.banner .wl {
+		display: none;
+	}
+
+	.banner .ws {
+		display: flex;
+	}
+
+	.banner .banner-content {
+		width: 100%;
+		max-width: 100%;
+		min-height: 85px;
+		align-items: normal;
+		justify-content: start;
+		flex-direction: column;
+	}
+
+	.banner .banner-content .top-details {
+		width: 100%;
+		max-width: 100%;
+		margin-top: 2rem;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.banner .banner-content .top-details .weather h1 {
+		font-style: normal;
+		font-weight: 500;
+		font-size: clamp(2rem, 4vw + 1rem, 3rem);
+		color: #ffffff;
+	}
+
+	.banner .banner-content .top-details .weather h4 {
+		font-style: normal;
+		font-weight: 500;
+		font-size: clamp(1rem, 1.5vw + 0.8rem, 1.25rem);
+		line-height: clamp(1.25rem, 2vw + 1rem, 1.875rem);
+		color: #dfd3d3;
+	}
+
+	.banner .banner-content .top-details .weather-icon img {
+		width: 80px;
+	}
+
+	.banner .banner-content .bottom-details {
+		width: 100%;
+		max-width: 100%;
+		display: flex;
+		min-height: inherit;
+		align-items: end;
+		justify-content: center;
+	}
+
+	.banner .banner-content .bottom-details .icons-detail {
+		position: relative;
+		padding: 0 0.8rem;
+	}
+
+	.banner
+		.banner-content
+		.bottom-details
+		.icons-detail:not(:last-child)::after {
+		content: "";
+		position: absolute;
+		top: 0;
+		right: 0;
+		height: 100%;
+		width: 1px;
+		background-color: #dfd3d3;
+		opacity: 0.5;
+	}
+
+	.banner .banner-content .bottom-details .icons-detail h4 {
+		font-size: normal;
+		font-size: clamp(0.5rem, 2vw + 1rem, 1.24rem);
+		line-height: clamp(1rem, 1.5vw + 1rem, 2rem);
+	}
+
+	.banner .banner-content .bottom-details .icons-detail h4:nth-child(1) {
+		font-weight: 600;
+		color: #ffffff;
+		opacity: 0.8;
+	}
+
+	.banner .banner-content .bottom-details .icons-detail h4:nth-child(2) {
+		font-weight: 500;
+		color: #dfd3d3;
+		opacity: 0.8;
+	}
+}
+
+@media (max-width: 518px) {
+	.banner {
+		margin: 1rem 1rem;
+	}
+
+	.banner > img {
+		min-height: 230px;
+	}
+
+	.banner .banner-content {
+		min-height: 85px;
+	}
+
+	.banner .banner-content .top-details .weather h1 {
+		font-size: clamp(1rem, 4vw + 1rem, 2rem);
+	}
+
+	.banner .banner-content .top-details .weather h4 {
+		font-size: clamp(0.825rem, 1vw + 1rem, 1, 4rem);
+	}
+
+	.banner .banner-content .bottom-details .icons-detail {
+		position: relative;
+		padding: 0 0.5rem;
+	}
+
+	.banner .banner-content .bottom-details .icons-detail h4 {
+		font-size: normal;
+		font-size: clamp(0.3rem, 2vw + 0.3rem, 2.5rem);
+		line-height: clamp(1.25rem, 1.5vw + 1rem, 1.5rem);
+	}
+}

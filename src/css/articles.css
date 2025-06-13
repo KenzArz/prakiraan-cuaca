@@ -1,0 +1,34 @@
+.more-article {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 1rem 2rem 2rem;
+	gap: 3rem;
+	width: 100%;
+	min-height: 100px;
+	flex-wrap: wrap;
+}
+
+.article-card img {
+	width: 20rem;
+	height: 9rem;
+	border-radius: 0.5rem;
+	object-fit: cover;
+	cursor: pointer;
+}
+
+@media (max-width: 630px) {
+	.more-article {
+		flex-wrap: wrap;
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	.more-article .article-card {
+		width: 40%;
+	}
+
+	.more-article .article-card img {
+		width: 100%;
+	}
+}
