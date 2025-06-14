@@ -2,7 +2,6 @@ import {
 	BrowserRouter as Router,
 	Routes,
 	Route,
-	Link,
 	useLocation,
 } from "react-router-dom";
 import { lazy, Suspense, useEffect, useState } from "react";
@@ -10,6 +9,7 @@ import { lazy, Suspense, useEffect, useState } from "react";
 import "./css/App.css";
 import Loading from "./components/loading.jsx";
 import BlogPost from "./routers/blogPost.jsx";
+import Code from "./js/areaCode.json";
 
 function App() {
 	const Home = lazy(() => import("./routers/home.jsx"));
@@ -31,6 +31,12 @@ function App() {
 
 	useEffect(() => {
 		navigator.geolocation.getCurrentPosition(
+			function () {},
+			function () {},
+			{}
+		);
+
+		navigator.geolocation.getCurrentPosition(
 			position => {
 				setPosition({
 					lat: position.coords.latitude,
@@ -41,28 +47,28 @@ function App() {
 			{
 				enableHighAccuracy: true,
 				timeout: 10000,
-				maximumAge: 0,
+				maximumAge: 60000,
 			}
 		);
 	}, []);
-
+	console.log(position);
 	useEffect(() => {
 		if (!position || localStorage.getItem("cordinate")) return;
 		(async () => {
-			const url = `http://localhost:3000/coordinate`;
+			const url = `https://nominatim.openstreetmap.org/reverse?format=json&lat=${position.lat}&lon=${position.long}&zoom=18&addressdetails=1`;
 			const response = await fetch(url, {
 				headers: {
 					"Accept-Language": "en-US,en;q=0.9",
-					"User-Agent":
-						"Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
-					"Content-Type": "Application/json",
 				},
-				method: "POST",
-				body: JSON.stringify(position),
 			});
 			const body = await response.json();
-			if (body.statusCode != 200) return;
-			localStorage.setItem("cordinate", JSON.stringify(body.address));
+			console.log(body);
+			const currentWilayah = Code.find(
+				cordinate =>
+					cordinate.city.toLowerCase() == body.address.village.toLowerCase()
+			);
+			localStorage.setItem("cordinate", JSON.stringify(currentWilayah));
+			location.reload();
 		})();
 	}, [position]);
 

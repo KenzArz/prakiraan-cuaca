@@ -13,26 +13,32 @@ export default function Home() {
 	const [weather, setWeather] = useState({ data: [] });
 	const [infoFullWeather, setInfoFUllWeather] = useState();
 	const [loading, setLoading] = useState(true);
-	const userCordinate = JSON.parse(localStorage.getItem("cordinate"));
+	const [userCordinate, setUserCordinate] = useState(null);
+
 	useEffect(() => {
-		const getWeather = async () => {
-			const response = await fetch(
+		const cord = JSON.parse(localStorage.getItem("cordinate"));
+		setUserCordinate(cord);
+	}, []);
+
+	useEffect(() => {
+		if (!userCordinate) return;
+		const fetchData = async () => {
+			const databmkg = await fetch(
 				`https://api.bmkg.go.id/publik/prakiraan-cuaca?adm4=${userCordinate.coordinate}`
 			);
-			const body = await response.json();
-			setWeather(body);
-		};
-		const getFullWeather = async () => {
-			const response = await fetch(
+			const bmkgResponse = await databmkg.json();
+			setWeather(bmkgResponse);
+
+			const weatherData = await fetch(
 				`http://api.weatherapi.com/v1/current.json?key=4d823b1464ae4e98bdd30441252703&q=${userCordinate.city}&aqi=yes`
 			);
-			const body = await response.json();
-			setInfoFUllWeather(body);
+			const weatherResponse = await weatherData.json();
+			setInfoFUllWeather(weatherResponse);
 			setLoading(false);
 		};
-		getWeather();
-		getFullWeather();
-	}, []);
+
+		fetchData();
+	}, [userCordinate]);
 	const [time, setTime] = useState(null);
 
 	useEffect(() => {
