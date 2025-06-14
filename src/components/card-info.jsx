@@ -43,8 +43,7 @@ export default function ({ data }) {
 						<h3>
 							{data[0].lokasi.desa}, {new Date(m.local_datetime).getHours()}:
 							{new Date(m.local_datetime).getMinutes() < 10 ? "0" : ""}
-							{new Date(m.local_datetime).getMinutes()}
-							{zone()}
+							{new Date(m.local_datetime).getMinutes()} {zone()}
 						</h3>
 						<div className="detail-informations">
 							<div className="icon-informations">

@@ -139,6 +139,11 @@
 	.card-info .card h3 {
 		font-size: 1rem;
 		line-height: 25px;
+		margin-left: 0.7rem;
+	}
+
+	.card-info .card .detail-informations {
+		margin-left: 0.7rem;
 	}
 
 	.card-info .card .detail-informations .icon-informations h4 {

@@ -223,7 +223,7 @@
 	}
 
 	.banner .banner-content .top-details .weather-icon img {
-		width: 80px;
+		width: 100px;
 	}
 
 	.banner .banner-content .bottom-details {
@@ -292,6 +292,10 @@
 
 	.banner .banner-content .top-details .weather h4 {
 		font-size: clamp(0.825rem, 1vw + 1rem, 1, 4rem);
+	}
+
+	.banner .banner-content .bottom-details {
+		height: 6.5rem;
 	}
 
 	.banner .banner-content .bottom-details .icons-detail {
