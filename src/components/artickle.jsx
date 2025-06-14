@@ -1,4 +1,3 @@
-import Aqi from "../assets/images/articles/partikulat-materi.png";
 import "../css/articles.css";
 
 import { BlogContent } from "../js/blog-content";

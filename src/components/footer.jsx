@@ -72,8 +72,8 @@ export default function () {
 						<h3>Tautan terkait</h3>
 						<div className="links">
 							<a href="/#root">Home</a>
-							<a href="/cuaca">Cuaca</a>
-							<a href="/aqi">Kualitas Udara</a>
+							{/* <a href="/cuaca">Cuaca</a>
+							<a href="/aqi">Kualitas Udara</a> */}
 							<a href="blog">Blog</a>
 							<a href="/about">About</a>
 						</div>

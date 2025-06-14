@@ -51,7 +51,6 @@ function App() {
 			}
 		);
 	}, []);
-	console.log(position);
 	useEffect(() => {
 		if (!position || localStorage.getItem("cordinate")) return;
 		(async () => {

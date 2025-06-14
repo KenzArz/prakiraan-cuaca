@@ -85,7 +85,6 @@ export default function AqiCarousel() {
 
 		fetchAqiData();
 	}, []);
-	console.log(aqiCity);
 
 	const trackRef = useRef(null);
 	const containerRef = useRef(null);
@@ -115,7 +114,7 @@ export default function AqiCarousel() {
 	const handleNavigation = direction => {
 		const newIndex =
 			direction === "next"
-				? Math.min(currentIndex + 1, cities.length - visibleCards)
+				? Math.min(currentIndex + 1, aqiCity.length - visibleCards)
 				: Math.max(currentIndex - 1, 0);
 
 		setCurrentIndex(newIndex);
@@ -162,7 +161,7 @@ export default function AqiCarousel() {
 			<button
 				className="navigation-button navigation-button--next"
 				onClick={() => handleNavigation("next")}
-				disabled={currentIndex >= cities.length - visibleCards}
+				disabled={currentIndex >= aqiCity.length - visibleCards}
 			>
 				<img src={Arrow} alt="Next" />
 			</button>

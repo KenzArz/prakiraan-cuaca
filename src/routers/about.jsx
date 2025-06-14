@@ -5,9 +5,9 @@ import Title from "../components/title";
 import Footer from "../components/footer";
 
 import "../css/about.css";
-import Bmkg from "../assets/images/external-assets/bmkg.png";
-import Windy from "../assets/images/external-assets/windy.png";
-import Weatherapi from "../assets/images/external-assets/weatherapi.png";
+import Bmkg from "../../public/images/external-assets/bmkg.png";
+import Windy from "../../public/images/external-assets/windy.png";
+import Weatherapi from "../../public/images/external-assets/weatherapi.png";
 
 export default function () {
 	const navigate = useNavigate();

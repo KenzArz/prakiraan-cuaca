@@ -2,7 +2,7 @@ export const BlogContent = [
 	{
 		id: "1",
 		title: "Konsentrasi Partikulat (PM 2.5)",
-		image: "/src/assets/images/articles/partikulat-materi.png",
+		image: "/images/articles/partikulat-materi.png",
 		summary: "Apa PM 2.5? dan apakah itu berbahaya?",
 		author: "Aldi Wijaya",
 		publishedDate: "2025-06-08",
@@ -32,7 +32,7 @@ export const BlogContent = [
 	{
 		id: "2",
 		title: "Kenali apa itu UV indeks",
-		image: "/src/assets/images/articles/UV-index.png",
+		image: "/images/articles/UV-index.png",
 		summary: "Indeks berapakah yang cocok untuk kulit?",
 		author: "Aldi Wijaya",
 		publishedDate: "2025-06-08",
@@ -62,7 +62,7 @@ export const BlogContent = [
 	{
 		id: "3",
 		title: "Apa Itu Kelembaban Udara?",
-		image: "/src/assets/images/articles/kelembaban.jpg",
+		image: "/images/articles/kelembaban.jpg",
 		summary: "Apa efek dari kelembaban yang tinggi?",
 		author: "Aldi Wijaya",
 		publishedDate: "2025-06-08",

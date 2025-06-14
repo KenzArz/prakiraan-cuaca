@@ -4,7 +4,7 @@ import Footer from "../components/footer";
 import { useNavigate } from "react-router-dom";
 
 import "../css/blog.css";
-import PM from "../assets/images/articles/partikulat-materi.png";
+import PM from "../../public/images/articles/partikulat-materi.png";
 
 export default function () {
 	const navigate = useNavigate();

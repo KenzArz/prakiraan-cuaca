@@ -1,6 +1,5 @@
 import Temperature from "../assets/icons/weathers-info/temperature.svg";
 import Humidity from "../assets/icons/weathers-info/humidity.svg";
-import Strom from "../assets/logo/storm.png";
 
 import "../css/card-info.css";
 import "../css/card-schedule.css";

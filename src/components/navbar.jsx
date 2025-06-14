@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { motion } from "framer-motion";
 import "../css/navbar.css";
 import Logo from "../assets/icons/cloudy.svg";
 
